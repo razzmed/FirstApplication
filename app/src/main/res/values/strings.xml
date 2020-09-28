@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FirstApplication</string>
+    <string name="enter_text">Enter text</string>
+    <string name="share_1st_activity">Share 1st activity</string>
+    <string name="share_2nd_activity">Share 2nd activity</string>
+    <string name="text_from_1st_activity">Text from 1st activity</string>
+</resources>
