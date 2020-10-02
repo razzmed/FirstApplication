@@ -15,6 +15,7 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
         showTextFirstActivity()
+        onSendBack()
     }
 
     private fun showTextFirstActivity() {
@@ -23,13 +24,17 @@ class SecondActivity : AppCompatActivity() {
         editText2.setText(text)
     }
 
-    fun onSendBack(view: View) {
-        val newText = editText2.text.toString().trim()
-        if (newText.isNotEmpty()) {
-            intent.putExtra("key", newText)
-            setResult(RESULT_OK, intent)
-            finish()
+    fun onSendBack() {
+        button.setOnClickListener {
+            val newText = editText2.text.toString().trim()
+            if (newText.isNotEmpty()) {
+                val intent: Intent = intent
+                intent.putExtra("key", newText)
+                setResult(RESULT_OK, intent)
+                finish()
+            }
         }
+
     }
 
 }

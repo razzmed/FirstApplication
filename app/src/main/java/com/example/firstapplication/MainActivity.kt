@@ -10,28 +10,27 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-    var name: String = "Please enter text"
-    var REQUEST_KEY: Int = 100
+    private var REQUEST_KEY: Int = 100
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        btnFirstActivity()
     }
 
-    private fun toast(name: String) {
-        Toast.makeText(this, name, Toast.LENGTH_SHORT).show()
-    }
-
-    fun btnFirstActivity(view: View) {
-        val textFirstActivity = editText.text.toString().trim()
-        if (textFirstActivity.isNotEmpty()) {
-            startActivityForResult(
-                Intent(this, SecondActivity::class.java).putExtra("key", textFirstActivity)
-                , REQUEST_KEY
-            )
-        } else {
-            toast(name)
+    fun btnFirstActivity() {
+        btn_first_activity.setOnClickListener {
+            val textFirstActivity = editText.text.toString().trim()
+            if (textFirstActivity.isNotEmpty()) {
+                startActivityForResult(
+                    Intent(this, SecondActivity::class.java).putExtra("key", textFirstActivity)
+                    , REQUEST_KEY
+                )
+            } else {
+                showToast(this, resources.getString(R.string.please_enter_text))
+            }
         }
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

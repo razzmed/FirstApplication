@@ -33,7 +33,6 @@
         android:id="@+id/btn_first_activity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="btnFirstActivity"
         android:text="@string/share_2nd_activity"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"

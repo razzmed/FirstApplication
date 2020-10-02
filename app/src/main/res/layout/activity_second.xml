@@ -24,7 +24,6 @@
         android:layout_height="wrap_content"
         android:text="@string/share_1st_activity"
         android:textSize="20sp"
-        android:onClick="onSendBack"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

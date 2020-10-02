@@ -4,4 +4,5 @@
     <string name="share_1st_activity">Share 1st activity</string>
     <string name="share_2nd_activity">Share 2nd activity</string>
     <string name="text_from_1st_activity">Text from 1st activity</string>
+    <string name="please_enter_text">Please enter text</string>
 </resources>
